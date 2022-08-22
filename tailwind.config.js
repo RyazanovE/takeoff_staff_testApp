@@ -5,6 +5,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,ts,tsx}"],
   theme: {
     colors: {
+      "red":'#E12D07',
       "violet": "#3e4684",
       "login-text": "#4d4d4d",
       transparent: 'transparent',
