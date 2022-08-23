@@ -2,8 +2,35 @@
   "users": [
     {
       "email": "takeoffstaff@gmail.com",
-      "password": "$2a$10$RwpNN9xxExvfJWQlxV/L3OLxyfhPvS/JFmDsHo4nkc5elV5TNpaym",
+      "password": "$2a$10$Kshmcr2twKeOOyFsin370ebCr.0tQ4DnxKg4taExbFMk4oTc78T5a",
       "id": 1
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Geordfsfsdfsdfs",
+      "phone": "+79164448739",
+      "id": 4
+    },
+    {
+      "name": "hgdfh",
+      "phone": "gh",
+      "id": 5
+    },
+    {
+      "name": "fg",
+      "phone": "fghf",
+      "id": 6
+    },
+    {
+      "name": "fdg",
+      "phone": "fdg",
+      "id": 7
+    },
+    {
+      "name": "dfgdfg",
+      "phone": "dfgdfg",
+      "id": 8
     }
   ]
 }

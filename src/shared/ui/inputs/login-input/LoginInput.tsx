@@ -22,7 +22,7 @@ const LoginInput: React.FC<ILoginInputProps> = memo(({ className, isValid, type,
 
 	return (
 		<div className={wrapperClass}>
-			<label className="">{isEmail ? "Email Address" : "Password"}</label>
+			<label className="">{isEmail ? "Почта" : "Пароль"}</label>
 			<div className='flex items-center gap-3'>
 				{isEmail ? <MailSvg fill='login-text' height={16} width={16} /> : <MailSvg fill='black' height={16} width={16} />}
 				<input ref={inputRef} {...props} className={inputClass} placeholder={(isEmail) ? "Username@gmail.com" : "*********"} />

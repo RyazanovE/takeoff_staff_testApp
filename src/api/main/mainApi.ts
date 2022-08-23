@@ -5,5 +5,5 @@ export const mainApi = createApi({
   reducerPath: "mainApi",
   baseQuery: baseQuery({ baseUrl: "http://localhost:3004/" }),
   endpoints: (build) => ({}),
+  tagTypes: ["Contacts"],
 });
-

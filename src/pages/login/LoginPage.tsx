@@ -4,6 +4,7 @@ import { useInput } from 'hooks/input/useInput';
 import { VioletButton } from 'shared/ui/buttons/violet-button/VioletButton';
 import { LoginInput } from 'shared/ui/inputs/login-input/LoginInput';
 import { useNavigate } from 'react-router';
+import { useActions } from 'hooks/actions/useActions';
 
 export type ILoginPageProps = {
 
@@ -18,12 +19,16 @@ const LoginPage: React.FC<ILoginPageProps> = ({ }) => {
 	const { setValue: setPass, ...passwordInput } = useInput()
 	const [isValid, setisValid] = useState(true);
 
+	const { setIsLoggedIn } = useActions()
+
 	const loginClickHandler = () => {
 
-		console.log({ email: emailInput.value, password: passwordInput.value })
 		login({ email: emailInput.value, password: passwordInput.value })
 			.unwrap()
-			.then(() => navigate("/main"))
+			.then(() => {
+				setIsLoggedIn(true)
+				navigate("/main")
+			})
 			.catch(e => {
 				setisValid(false)
 				setTimeout(() => setisValid(true), 1000)
@@ -36,7 +41,7 @@ const LoginPage: React.FC<ILoginPageProps> = ({ }) => {
 				<img src="/circle.JPG" alt="circle" className='mx-auto my-6' />
 				<LoginInput isValid={isValid} {...emailInput} type='email' />
 				<LoginInput isValid={isValid} {...passwordInput} type='password' />
-				<VioletButton isLoading={isLoading} onClick={loginClickHandler}>Login</VioletButton>
+				<VioletButton isLoading={isLoading} onClick={loginClickHandler}>Войти</VioletButton>
 			</form>
 		</section>
 	);

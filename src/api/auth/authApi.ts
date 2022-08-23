@@ -1,6 +1,5 @@
-import { createApi } from "@reduxjs/toolkit/query/react";
-import { baseQuery } from "api/base-query/baseQuery";
 import { mainApi } from "api/main/mainApi";
+import { LOGIN_URL } from "api/urls/urls";
 
 export interface ILoginResult {
   accessToken: string;
@@ -18,7 +17,7 @@ export interface ILoginParams {
 export const authApi = mainApi.injectEndpoints({
   endpoints: (build) => ({
     login: build.mutation<ILoginResult, ILoginParams>({
-      query: (data) => ({ url: "login", method: "post", data }),
+      query: (data) => ({ url: LOGIN_URL, method: "post", data }),
     }),
   }),
 });

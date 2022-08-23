@@ -5,8 +5,10 @@ interface IInitialState {
   isLoggedIn: boolean;
 }
 
+const isLoggedJson = localStorage.getItem("login");
+
 const INITIAL_STATE: IInitialState = {
-  isLoggedIn: false,
+  isLoggedIn: isLoggedJson ? JSON.parse(isLoggedJson) : false,
 };
 
 const authSlice = createSlice({
@@ -14,6 +16,7 @@ const authSlice = createSlice({
   initialState: INITIAL_STATE,
   reducers: {
     setIsLoggedIn(state, action: PayloadAction<boolean>) {
+      localStorage.setItem("login", JSON.stringify(action.payload));
       state.isLoggedIn = action.payload;
     },
   },
@@ -25,4 +28,4 @@ export const isLoggedinSelector = (state: RootState) => state.authReducer.isLogg
 //actions
 export const { setIsLoggedIn } = authSlice.actions;
 
-export const authReducer = authSlice.reducer;
+export default  authSlice.reducer;
