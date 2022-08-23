@@ -5,6 +5,7 @@ import { VioletButton } from 'shared/ui/buttons/violet-button/VioletButton';
 import { LoginInput } from 'shared/ui/inputs/login-input/LoginInput';
 import { useNavigate } from 'react-router';
 import { useActions } from 'hooks/actions/useActions';
+import { CONTACTS_ROUTE } from 'pages/routing/routes';
 
 export type ILoginPageProps = {
 
@@ -27,7 +28,7 @@ const LoginPage: React.FC<ILoginPageProps> = ({ }) => {
 			.unwrap()
 			.then(() => {
 				setIsLoggedIn(true)
-				navigate("/main")
+				navigate(CONTACTS_ROUTE)
 			})
 			.catch(e => {
 				setisValid(false)

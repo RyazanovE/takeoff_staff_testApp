@@ -8,10 +8,10 @@ const ContactsTableHead: React.FC<IContactsTableHeadProps> = ({ }) => {
 	return (
 		<thead>
 			<tr className='text-left'>
-				<th>Имя</th>
-				<th>Телефон</th>
-				<th></th>
-				<th></th>
+				<th className='w-[40%]'>Имя</th>
+				<th className='w-[40%]'>Телефон</th>
+				<th className='w-[10%]'></th>
+				<th className='w-[10%]'></th>
 			</tr>
 		</thead>
 	);

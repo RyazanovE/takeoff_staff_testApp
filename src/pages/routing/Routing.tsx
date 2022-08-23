@@ -1,12 +1,13 @@
 import { useAppSelector } from "hooks/redux/reduxHooks";
+import ContactsPage from "pages/contacts/ContactsPage";
+import LoginPage from "pages/login/LoginPage";
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { isLoggedinSelector } from "store/slices/auth/authSlice";
 import { CONTACTS_ROUTE, LOGIN_ROUTE } from "./routes";
 
 //TODO:добавить loader
-const LoginPage = lazy(() => import("../login/LoginPage"));
-const ContactsPage = lazy(() => import("../contacts/ContactsPage"));
+
 
 export const Routing = () => {
 

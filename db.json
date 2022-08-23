@@ -8,29 +8,29 @@
   ],
   "contacts": [
     {
-      "name": "Geordfsfsdfsdfs",
-      "phone": "+79164448739",
-      "id": 4
-    },
-    {
-      "name": "hgdfh",
-      "phone": "gh",
+      "name": "Григорий",
+      "phone": "+79163334753",
       "id": 5
     },
     {
-      "name": "fg",
-      "phone": "fghf",
+      "name": "Евгений",
+      "phone": "+79163334755",
       "id": 6
     },
     {
-      "name": "fdg",
-      "phone": "fdg",
+      "name": "Матвей",
+      "phone": "+79163334758",
       "id": 7
     },
     {
-      "name": "dfgdfg",
-      "phone": "dfgdfg",
+      "name": "Николай",
+      "phone": "+79163334759",
       "id": 8
+    },
+    {
+      "name": "Мария",
+      "phone": "+79163334751",
+      "id": 9
     }
   ]
 }

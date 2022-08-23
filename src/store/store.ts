@@ -1,11 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { mainApi } from "api/main/mainApi";
-import authReducer from "./slices/auth/authSlice";
+import authSlice from "./slices/auth/authSlice";
 import contactsSlice from "./slices/contacts/contactsSlice";
 
 export const store = configureStore({
   reducer: {
-    authReducer,
+    authSlice,
     contactsSlice,
     [mainApi.reducerPath]: mainApi.reducer,
   },

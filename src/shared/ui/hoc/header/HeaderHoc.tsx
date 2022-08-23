@@ -1,15 +1,18 @@
 import { useActions } from 'hooks/actions/useActions';
+import { LOGIN_ROUTE } from 'pages/routing/routes';
 import React, { PropsWithChildren } from 'react';
+import { useNavigate } from 'react-router';
 
 export type IHeaderHocProps = {
 
 }
 
 const HeaderHoc: React.FC<PropsWithChildren<IHeaderHocProps>> = ({ children }) => {
-
 	const { setIsLoggedIn } = useActions()
 
 	const logOutHandler = () => setIsLoggedIn(false)
+	
+
 
 	return (
 		<>
