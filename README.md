@@ -4,7 +4,7 @@ npm start
 
 ### Server Start
 
-npm serve
+npm run serve
 
 ### Логин и пароль для авторизации
 takeoffstaff@gmail.com
